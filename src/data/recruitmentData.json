@@ -1,0 +1,163 @@
+{
+  "recruitments": [
+    {
+      "id": 1,
+      "title": "CityU学生会技术部",
+      "description": "负责学校网站维护、活动系统开发、技术支持等工作",
+      "organizer": "学生会",
+      "organizerAvatar": "学",
+      "type": "学生组织",
+      "typeValue": "student",
+      "skills": ["Web开发", "系统维护", "技术支持"],
+      "positions": [
+        { "role": "技术部长", "count": 1, "filled": 0 },
+        { "role": "开发工程师", "count": 3, "filled": 1 },
+        { "role": "运维工程师", "count": 2, "filled": 0 }
+      ],
+      "benefits": ["实习证明", "技能培训", "人脉拓展"],
+      "workload": "每周6-8小时",
+      "deadline": "2024-01-10",
+      "applications": 25,
+      "isUrgent": true,
+      "createdAt": "2023-12-01"
+    },
+    {
+      "id": 2,
+      "title": "AI研究社团",
+      "description": "专注人工智能技术研究与应用，定期举办技术分享会和学术活动",
+      "organizer": "王五",
+      "organizerAvatar": "王",
+      "type": "学术社团",
+      "typeValue": "academic",
+      "skills": ["机器学习", "深度学习", "Python", "TensorFlow"],
+      "positions": [
+        { "role": "技术总监", "count": 1, "filled": 0 },
+        { "role": "研究员", "count": 5, "filled": 2 },
+        { "role": "项目经理", "count": 2, "filled": 1 }
+      ],
+      "benefits": ["学术研究", "论文发表", "技能提升"],
+      "workload": "每周4-6小时",
+      "deadline": "2024-01-25",
+      "applications": 18,
+      "isUrgent": false,
+      "createdAt": "2023-12-05"
+    },
+    {
+      "id": 3,
+      "title": "创业者协会",
+      "description": "为有创业想法的学生提供平台，组织创业培训、项目孵化和投资对接",
+      "organizer": "陈创业",
+      "organizerAvatar": "陈",
+      "type": "创业社团",
+      "typeValue": "startup",
+      "skills": ["商业策划", "市场分析", "项目管理", "团队协作"],
+      "positions": [
+        { "role": "社团会长", "count": 1, "filled": 1 },
+        { "role": "项目经理", "count": 3, "filled": 1 },
+        { "role": "市场推广", "count": 2, "filled": 0 },
+        { "role": "财务管理", "count": 1, "filled": 0 }
+      ],
+      "benefits": ["创业指导", "资源对接", "人脉扩展"],
+      "workload": "每周5-7小时",
+      "deadline": "2024-02-05",
+      "applications": 15,
+      "isUrgent": false,
+      "createdAt": "2023-12-10"
+    },
+    {
+      "id": 4,
+      "title": "摄影协会",
+      "description": "热爱摄影的同学聚集地，定期组织外拍活动、摄影比赛和技术交流会",
+      "organizer": "李摄影",
+      "organizerAvatar": "李",
+      "type": "文艺社团",
+      "typeValue": "arts",
+      "skills": ["摄影技术", "后期处理", "美学素养", "活动策划"],
+      "positions": [
+        { "role": "技术指导", "count": 2, "filled": 1 },
+        { "role": "活动策划", "count": 3, "filled": 0 },
+        { "role": "宣传推广", "count": 2, "filled": 1 }
+      ],
+      "benefits": ["摄影技能", "作品展示", "社交拓展"],
+      "workload": "每周3-5小时",
+      "deadline": "2024-01-30",
+      "applications": 22,
+      "isUrgent": false,
+      "createdAt": "2023-12-15"
+    },
+    {
+      "id": 5,
+      "title": "编程技术社",
+      "description": "专注编程技术交流与提升，定期举办编程比赛、技术讲座和项目开发",
+      "organizer": "张程序",
+      "organizerAvatar": "张",
+      "type": "技术社团",
+      "typeValue": "tech",
+      "skills": ["编程技能", "算法思维", "团队协作", "项目开发"],
+      "positions": [
+        { "role": "技术负责人", "count": 1, "filled": 0 },
+        { "role": "开发组长", "count": 2, "filled": 1 },
+        { "role": "培训讲师", "count": 3, "filled": 1 }
+      ],
+      "benefits": ["技能提升", "项目经验", "竞赛机会"],
+      "workload": "每周4-6小时",
+      "deadline": "2024-02-15",
+      "applications": 30,
+      "isUrgent": false,
+      "createdAt": "2023-12-20"
+    },
+    {
+      "id": 6,
+      "title": "篮球协会",
+      "description": "热爱篮球运动的同学聚集地，定期组织训练、友谊赛和校际比赛",
+      "organizer": "刘篮球",
+      "organizerAvatar": "刘",
+      "type": "体育社团",
+      "typeValue": "sports",
+      "skills": ["篮球技能", "团队协作", "体能训练", "比赛组织"],
+      "positions": [
+        { "role": "队长", "count": 2, "filled": 1 },
+        { "role": "教练助理", "count": 1, "filled": 0 },
+        { "role": "活动组织", "count": 2, "filled": 0 }
+      ],
+      "benefits": ["体能提升", "团队精神", "比赛机会"],
+      "workload": "每周6-8小时",
+      "deadline": "2024-01-20",
+      "applications": 28,
+      "isUrgent": true,
+      "createdAt": "2023-12-25"
+    }
+  ],
+  "applications": [
+    {
+      "id": 1,
+      "recruitmentId": 2,
+      "title": "AI研究社团",
+      "position": "研究员",
+      "status": "已通过",
+      "appliedDate": "2024-01-03",
+      "organizer": "王五",
+      "message": "我对机器学习和深度学习有浓厚兴趣，希望能加入贵社团进行学术研究。"
+    },
+    {
+      "id": 2,
+      "recruitmentId": 3,
+      "title": "创业者协会",
+      "position": "项目经理",
+      "status": "待审核",
+      "appliedDate": "2024-01-05",
+      "organizer": "陈创业",
+      "message": "我有项目管理经验，希望能为协会的发展贡献力量。"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "当前用户",
+      "email": "currentuser@example.com",
+      "avatar": "用",
+      "role": "student",
+      "appliedRecruitmentIds": [2, 3]
+    }
+  ]
+}
