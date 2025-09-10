@@ -1,0 +1,163 @@
+{
+  "courseDiscussions": [
+    {
+      "id": 1,
+      "title": "CS3104数据结构与算法",
+      "description": "讨论课程内容，分享学习心得，解答疑问",
+      "members": 156,
+      "posts": 89,
+      "category": "计算机科学",
+      "instructor": "张教授",
+      "lastActivity": "2小时前",
+      "isJoined": false,
+      "creator": "系统默认"
+    },
+    {
+      "id": 2,
+      "title": "EE2001电路分析基础",
+      "description": "电路理论学习讨论组",
+      "members": 89,
+      "posts": 67,
+      "category": "电子工程",
+      "instructor": "李教授",
+      "lastActivity": "4小时前",
+      "isJoined": false,
+      "creator": "系统默认"
+    },
+    {
+      "id": 3,
+      "title": "MA2001高等数学",
+      "description": "微积分、线性代数学习交流",
+      "members": 234,
+      "posts": 145,
+      "category": "数学统计",
+      "instructor": "王教授",
+      "lastActivity": "1小时前",
+      "isJoined": false,
+      "creator": "系统默认"
+    },
+    {
+      "id": 4,
+      "title": "ME3005机械设计原理",
+      "description": "机械结构设计与分析讨论",
+      "members": 76,
+      "posts": 45,
+      "category": "机械工程",
+      "instructor": "赵教授",
+      "lastActivity": "1天前",
+      "isJoined": false,
+      "creator": "系统默认"
+    }
+  ],
+  "learningMaterials": [
+    {
+      "id": 1,
+      "title": "数据结构复习资料合集",
+      "type": "PDF",
+      "size": "15.6MB",
+      "downloads": 234,
+      "uploader": "学霸同学",
+      "uploadTime": "1周前",
+      "rating": 4.8,
+      "description": "包含所有章节的重点总结和练习题",
+      "fileType": "document",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "Web开发实战视频教程",
+      "type": "视频",
+      "size": "2.3GB",
+      "downloads": 156,
+      "uploader": "前端大神",
+      "uploadTime": "3天前",
+      "rating": 4.9,
+      "description": "从零开始的全栈Web开发教程",
+      "fileType": "video",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "机器学习算法代码实现",
+      "type": "ZIP",
+      "size": "45.2MB",
+      "downloads": 89,
+      "uploader": "AI研究生",
+      "uploadTime": "5天前",
+      "rating": 4.7,
+      "description": "常用机器学习算法的Python实现",
+      "fileType": "archive",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "title": "CS3104课程官方网站",
+      "type": "网页链接",
+      "size": "-",
+      "downloads": 567,
+      "uploader": "教务处",
+      "uploadTime": "1个月前",
+      "rating": 4.6,
+      "description": "课程大纲、作业提交、成绩查询等官方资源",
+      "fileType": "link",
+      "url": "https://www.cityu.edu.hk/courses/cs3104"
+    }
+  ],
+  "techExchanges": [
+    {
+      "id": 1,
+      "title": "React开发最佳实践分享",
+      "author": "张三",
+      "avatar": "张",
+      "tags": ["React", "前端", "JavaScript"],
+      "replies": 23,
+      "likes": 45,
+      "views": 156,
+      "time": "2小时前",
+      "isHot": false
+    },
+    {
+      "id": 2,
+      "title": "Python数据分析入门教程",
+      "author": "李四",
+      "avatar": "李",
+      "tags": ["Python", "数据分析", "机器学习"],
+      "replies": 34,
+      "likes": 67,
+      "views": 234,
+      "time": "1天前",
+      "isHot": false
+    },
+    {
+      "id": 3,
+      "title": "深度学习框架对比：TensorFlow vs PyTorch",
+      "author": "王五",
+      "avatar": "王",
+      "tags": ["深度学习", "TensorFlow", "PyTorch"],
+      "replies": 45,
+      "likes": 89,
+      "views": 345,
+      "time": "2天前",
+      "isHot": false
+    }
+  ],
+  "techTagCategories": {
+    "frontend": ["React", "Vue", "Angular", "前端", "JavaScript", "CSS", "HTML"],
+    "backend": ["后端", "Node.js", "Java", "Python", "Spring", "Django"],
+    "mobile": ["移动开发", "React Native", "Flutter", "iOS", "Android"],
+    "ai": ["人工智能", "深度学习", "TensorFlow", "PyTorch", "算法"],
+    "data": ["数据分析", "数据科学", "大数据", "Pandas", "可视化"],
+    "devops": ["DevOps", "Docker", "Kubernetes", "云服务"],
+    "database": ["数据库", "MySQL", "MongoDB", "Redis", "SQL"]
+  },
+  "majorOptions": [
+    { "value": "all", "label": "全部专业" },
+    { "value": "computer", "label": "计算机科学" },
+    { "value": "electrical", "label": "电子工程" },
+    { "value": "mechanical", "label": "机械工程" },
+    { "value": "civil", "label": "土木工程" },
+    { "value": "chemical", "label": "化学工程" },
+    { "value": "biomedical", "label": "生物医学" },
+    { "value": "mathematics", "label": "数学统计" }
+  ]
+}
