@@ -1585,7 +1585,12 @@ export function RecruitmentModule() {
                     });
                     
                     setMyRecruitments(updatedMyRecruitments);
-                    setIsEditDialogOpen(false);  
+                    setIsEditDialogOpen(false);
+                    
+
+                    
+
+                    
                     alert('招募信息更新成功！');
                   } catch (error) {
                     console.error('更新招募失败:', error);
