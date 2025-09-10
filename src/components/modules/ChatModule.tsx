@@ -446,7 +446,8 @@ export function ChatModule() {
       large: '18px',
     };
     const px = map[globalChatSettings.fontSize] ?? '16px';
-    document.documentElement.style.setProperty('--font-size', px);
+    // 将字体大小设置存储在CSS变量中，但只在聊天模块内部使用
+    document.documentElement.style.setProperty('--chat-font-size', px);
     localStorage.setItem('app-fontsize', globalChatSettings.fontSize);
   }, [globalChatSettings.fontSize]);
 
@@ -468,7 +469,7 @@ export function ChatModule() {
 
   /** ---------- 渲染 ---------- */
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" style={{ fontSize: 'var(--chat-font-size, 16px)' }}>
       {/* 顶部操作 */}
       <div className="flex justify-between items-center">
         <div>
