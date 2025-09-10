@@ -145,6 +145,102 @@ export function RecruitmentModule() {
     localStorage.setItem('myRecruitments', JSON.stringify(myRecruitments));
   }, [recruitments, myApplications, appliedRecruitmentIds, myRecruitments]);
 
+  // 监听滚动事件，实现滚动到指定元素
+  useEffect(() => {
+    // 处理滚动到指定元素的函数
+    const scrollToElement = () => {
+      // 首先尝试从URL哈希中获取元素ID
+      let elementId = window.location.hash.substring(1);
+
+      // 如果URL哈希中没有，尝试从localStorage中获取
+      if (!elementId) {
+        try {
+          elementId = localStorage.getItem('targetElementId') || '';
+        } catch (error) {
+          console.error('Failed to get target element ID from localStorage:', error);
+        }
+      }
+
+      if (elementId) {
+        // 延迟执行滚动，确保组件已完全渲染
+        setTimeout(() => {
+          const targetElement = document.getElementById(elementId);
+          if (targetElement) {
+            // 使用平滑滚动效果
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // 添加高亮效果
+            targetElement.classList.add('highlighted');
+            setTimeout(() => {
+              targetElement.classList.remove('highlighted');
+            }, 2000);
+
+            // 清除localStorage中的目标ID
+            try {
+              localStorage.removeItem('targetElementId');
+            } catch (error) {
+              console.error('Failed to clear target element ID from localStorage:', error);
+            }
+          } else {
+            console.warn(`Element with ID ${elementId} not found`);
+          }
+        }, 300);
+      }
+    };
+
+    // 监听自定义滚动事件
+    const handleScrollEvent = (event: Event) => {
+      const customEvent = event as CustomEvent;
+      if (customEvent.detail && customEvent.detail.elementId) {
+        // 设置目标元素ID并触发滚动
+        try {
+          localStorage.setItem('targetElementId', customEvent.detail.elementId);
+          scrollToElement();
+        } catch (error) {
+          console.error('Failed to set target element ID in localStorage:', error);
+        }
+      }
+    };
+
+    // 添加事件监听器
+    window.addEventListener('scrollToElement', handleScrollEvent as EventListener);
+
+    // 组件加载时尝试滚动到目标元素
+    // 只在URL中有哈希值或localStorage中有目标ID时才滚动
+    const hasHash = window.location.hash && window.location.hash.length > 1;
+    let hasTargetId = false;
+    let oneTimeScroll = false;
+    try {
+      hasTargetId = !!localStorage.getItem('targetElementId');
+      oneTimeScroll = localStorage.getItem('oneTimeScroll') === 'true';
+    } catch (error) {
+      console.error('Failed to check target element ID or oneTimeScroll in localStorage:', error);
+    }
+
+    if (hasHash || hasTargetId) {
+      scrollToElement();
+
+      // 如果是一次性滚动，使用后清除标记
+      if (oneTimeScroll) {
+        try {
+          localStorage.removeItem('oneTimeScroll');
+
+          // 清除URL哈希值，防止下次进入时再次滚动
+          const currentUrl = new URL(window.location.href);
+          currentUrl.hash = '';
+          window.history.replaceState({}, '', currentUrl);
+        } catch (error) {
+          console.error('Failed to clear oneTimeScroll or URL hash:', error);
+        }
+      }
+    }
+
+    // 清理函数
+    return () => {
+      window.removeEventListener('scrollToElement', handleScrollEvent as EventListener);
+    };
+  }, []); // 空依赖数组，确保只在组件挂载和卸载时执行
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case '待审核': return 'bg-yellow-100 text-yellow-800';
@@ -851,7 +947,7 @@ export function RecruitmentModule() {
           <div className="grid gap-4">
             {sortedRecruitments.length === 0 ? null : (
               sortedRecruitments.map((recruitment) => (
-                <Card key={recruitment.id}>
+                <Card key={recruitment.id} id={`recruitment-${recruitment.id}`}>
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-start space-x-3">
@@ -1489,12 +1585,7 @@ export function RecruitmentModule() {
                     });
                     
                     setMyRecruitments(updatedMyRecruitments);
-                    setIsEditDialogOpen(false);
-                    
-
-                    
-
-                    
+                    setIsEditDialogOpen(false);  
                     alert('招募信息更新成功！');
                   } catch (error) {
                     console.error('更新招募失败:', error);
